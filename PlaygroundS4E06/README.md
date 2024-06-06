@@ -12,6 +12,10 @@ The target is categorical variable about students' graduate status with three un
 
 
 # Model
-**HistGradientBoosting model**
-****
-**** 
+I applied three models and made 10 folds for each. There are avarage score of 10 fold for each model below.
+
+**Random Forest**: 0.8267989100161017
+
+**HistGradientBoosting model**: 0.8336339311207299
+
+**XGBClassifier**: 0.8341043775697555
