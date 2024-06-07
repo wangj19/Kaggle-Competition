@@ -14,8 +14,16 @@ The target is categorical variable about students' graduate status with three un
 # Model
 I applied three models and made 10 folds for each. There are avarage score of 10 fold for each model below.
 
-**Random Forest**: 0.8267989100161017
+**Random Forest**: 0.826799
 
-**HistGradientBoosting model**: 0.8336339311207299
+**HistGradientBoosting model**: 0.833634
 
-**XGBClassifier**: 0.8341043775697555
+**XGBClassifier**: 0.834104
+
+I also employed RF feature importance method in ***Data Process*** session, and if we only selected the top 15 important features, the score won't be affected to much.
+
+**Random Forest of top 15 features**: 0.820343
+
+**HistGradientBoosting model of top 15 features**: 0.826890
+
+**XGBClassifier of top 15 features**: 0.826524
