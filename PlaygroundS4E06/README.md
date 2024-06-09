@@ -9,7 +9,16 @@ The dataset for this competition (both train and test) was generated from a deep
 
 The target is categorical variable about students' graduate status with three unique values: Graduate, Dropout, Other. There are 36 features about students' conditions: Marital status, Application mode, Application order, Course, Daytime/evening attendance, Previous qualification, Previous qualification (grade), Nacionality, Mother's qualification, Father's qualification, Mother's occupation, Father's occupation, Admission grade, Displaced, Educational special needs, Debtor, Gender, Scholarship holder, Age at enrollment, International, Curricular units 1st sem (enrolled), Curricular units 1st sem (evaluations), Curricular units 1st sem (approved), Curricular units 1st sem (grade), Curricular units 1st sem (without evaluations), Curricular units 2nd sem (credited), Curricular units 2nd sem (enrolled), Curricular units 2nd sem (evaluations), Curricular units 2nd sem (approved), Curricular units 2nd sem (grade), Curricular units 2nd sem (without evaluations), Unemployment rate, Inflation rate, GDP.
 
-
+# Directory Structure
+- Root/
+  - Kaggle/
+    - Input/
+        - playground-series-s4e6/
+            - test.csv
+            - train.csv
+    - Working/
+        - submission.csv
+  - playground.ipynb
 
 # Model
 I applied three models and made 10 folds for each. There are avarage score of 10 fold for each model below.

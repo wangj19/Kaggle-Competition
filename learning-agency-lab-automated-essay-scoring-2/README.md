@@ -9,9 +9,18 @@ Competition Link: https://www.kaggle.com/competitions/learning-agency-lab-automa
 - Root/
   - Kaggle/
     - Input/
-        - playground-series-s4e6/
-            - test.csv
-            - train.csv
+        - learning-agency-lab-automated-essay-scoring/
+          - test.csv
+          - train.csv
+        - essay-embedding-v1/
+          - Model1-embedding/
+          - Model2-embedding/
+          - ...
+        - Download HuggingFace Model/
+          - Model1/
+          - Model2/
+          - ...
+
     - Working/
         - submission.csv
   - playground.ipynb
