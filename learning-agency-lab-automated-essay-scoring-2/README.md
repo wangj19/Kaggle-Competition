@@ -5,6 +5,17 @@ The goal of this competition is to train a model to score student essays. Your e
 
 Competition Link: https://www.kaggle.com/competitions/learning-agency-lab-automated-essay-scoring-2
 
+# Directory Structure
+- Root/
+  - Kaggle/
+    - Input/
+        - playground-series-s4e6/
+            - test.csv
+            - train.csv
+    - Working/
+        - submission.csv
+  - playground.ipynb
+
 # Code Starter
 I draft my code from two open-source notebook. One notebook implements feature engineering based on the texts to expand features, including paragraph, sentence, and word-based features. It also contains character and word TFIDF features. All of these feature augmentation finally provides over 3800 features for the ***LGBM regressor*** to generate predictions with 5-fold train and validation datasets. The original notebook link: https://www.kaggle.com/code/deepaksingh47/feature-engineeing-lgbm
 

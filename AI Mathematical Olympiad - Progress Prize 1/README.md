@@ -16,6 +16,22 @@ Join us as we work towards a future where AI models’ mathematical reasoning sk
 
 starter code is forked from https://www.kaggle.com/code/abdurrafae/improved-code-interpretation
 
+# Directory Structure
+- Root/
+  - Kaggle/
+    - Input/
+        - ai-mathematical-olympiad-prize/
+            - test.csv
+            - train.csv
+        - deepseek-math/
+            - model
+            - config.json
+            - tokenizer.json
+    - Working/
+        - submission.csv
+  - updated-code-interpretation-n-repetitions-17.ipynb
+
+
 # Model
 
 This notebook applied zero-shot MMOS-DeepSeekMath-7B with self-consistency and generated code reasoning evaluation.
