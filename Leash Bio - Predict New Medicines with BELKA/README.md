@@ -38,7 +38,12 @@ Proteins are encoded in the genome, and names of the genes encoding those protei
 
 We screened three protein targets for this competition: ***EPHX2 (sEH)***, ***BRD4***, ***ALB (HSA)***
 
-# Directory Structure
+
+
+# Model 1 - 1D CNN model
+This "belka-1dcnn-starter-with-all-data" employed 1D-CNN model for prediction. There are 142 encoded features used as input and the model finally denses to 3 as prediction of bind. Due to the huge size of dataset, I built the train set into 15 fold and selected 3 of them for model-training and 10 epochs for each fold, which means only 1/5 data was used for training. The final score of average prediction of 3 folds on LeaderBoard is 0.391.
+
+## Directory Structure
 - Root/
   - Kaggle/
     - Input/
@@ -50,7 +55,10 @@ We screened three protein targets for this competition: ***EPHX2 (sEH)***, ***BR
           - sample_submission.csv 
     - Working/
         - submission.csv
+        - model-0.h5
+        - model-1.h5
+        - model-2.h5
   - belka-1dcnn-starter-with-all-data.ipynb
 
-# Model 1 - 1D CNN model
-This "belka-1dcnn-starter-with-all-data" employed 1D-CNN model for prediction. There are 142 encoded features used as input and the model finally denses to 3 as prediction of bind. Due to the huge size of dataset, I built the train set into 15 fold and selected 3 of them for model-training and 10 epochs for each fold, which means only 1/5 data was used for training. The final score of average prediction of 3 folds on LeaderBoard is 0.391.
+
+  # Model 2 - Xgb model
