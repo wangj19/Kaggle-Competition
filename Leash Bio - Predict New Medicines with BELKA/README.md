@@ -40,8 +40,8 @@ We screened three protein targets for this competition: ***EPHX2 (sEH)***, ***BR
 
 
 
-# Model 1 - 1D CNN model
-This "belka-1dcnn-starter-with-all-data" employed 1D-CNN model for prediction. There are 142 encoded features used as input and the model finally denses to 3 as prediction of bind. Due to the huge size of dataset, I built the train set into 15 fold and selected 3 of them for model-training and 10 epochs for each fold, which means only 1/5 data was used for training. The final score of average prediction of 3 folds on LeaderBoard is 0.391.
+# [Model 1 - 1D CNN model](https://www.kaggle.com/code/ahmedelfazouan/belka-1dcnn-starter-with-all-data/notebook)
+This "belka-1dcnn-starter-with-all-data" employed 1D-CNN model for prediction. There are 142 encoded features used as input and the model finally denses to 3 as prediction of bind. Due to the huge size of dataset, I built the train set into 15 fold and selected 3 of them for model-training and 10 epochs for each fold, which means only 1/5 data was used for training. The final score of average prediction of 3 folds on LeaderBoard is 0.400.
 
 ## Directory Structure
 - Root/
@@ -61,4 +61,50 @@ This "belka-1dcnn-starter-with-all-data" employed 1D-CNN model for prediction. T
   - belka-1dcnn-starter-with-all-data.ipynb
 
 
-  # Model 2 - Xgb model
+  # [Model 2 - Xgb model](https://www.kaggle.com/code/ricopue/leashbio-xgb-ecfp-10m-sample-rows)
+  This notebook employs encoded [ECFP](https://www.kaggle.com/code/ricopue/leashbio-create-10m-sample-data-and-ecfp) features (approximately 2000 features), and applys ***VarianceThreshold*** from sklearn package to filter them into 1300 features. The simple XGB model is applied without tunning and GPU usage. All of 9.5M data are used and 3000 iterations are planned for training. The original code reaches LB score of 0.369 and this original submission are used for my ensembling.
+
+## Directory Structure
+- Root/
+  - Kaggle/
+    - Input/
+        - leash-predict-chemical-bindings/
+          - test.csv
+          - test.parquet
+          - train.csv
+          - train.parque
+          - sample_submission.csv
+        - [LeashBio - Create 10M Sample Data and ecfp](https://www.kaggle.com/code/ricopue/leashbio-create-10m-sample-data-and-ecfp)/
+          - test_ecfp.npz
+          - train-ecfp.npz
+    - Working/
+        - submission.csv
+  - leashbio-xgb-ecfp-10m-sample-rows.ipynb
+
+  # [Model 3 - AutoML](https://www.kaggle.com/code/mehrankazeminia/5-belka-submission-autogluon-frag1-2-3)
+  The author of [these notebooks](https://www.kaggle.com/datasets/mehrankazeminia/belka-frag-1/code) attempted many models including XGB, LGBM and KNN. For this particular notebook, autogluon machine learning model is employed. And due to the large size of dataset, train set are split into three folds and predictions of three autoML models are combined. This notebook also did ensembling process to merge results of XGB and LGBM models, which I didn't include but considered for future improvement. The "sub_auto.csv" file are used for my ensembling process which only has the AutoML prediction results.
+
+ ## Directory Structure
+- Root/
+  - Kaggle/
+    - Input/
+        - leash-predict-chemical-bindings/
+          - test.csv
+          - test.parquet
+          - train.csv
+          - train.parque
+          - sample_submission.csv
+        - **Private Dataset**/
+          - auto_1.csv
+          - auto_2.csv
+          - auto_3.csv
+        - LeashBio - Create 10M Sample Data and ecfp/
+          - submission(xgb).csv
+        - BELKA - Competion Submission [LGBM]
+          - submission(lgbm).csv
+    - Working/
+        - submission.csv
+  - 5-belka-submission-autogluon-frag1-2-3.ipynb
+
+# Ensembling
+I combine all these models with particular weights(1D-CNN - 0.72, XGB - 0.18, AutoML - 0.10) to build my final predictions. These weights will be further experimented for better score and the current LB score is 0.437.
