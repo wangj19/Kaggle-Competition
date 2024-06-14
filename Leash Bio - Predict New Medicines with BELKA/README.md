@@ -41,7 +41,10 @@ We screened three protein targets for this competition: ***EPHX2 (sEH)***, ***BR
 
 
 # [Model 1 - 1D CNN model](https://www.kaggle.com/code/ahmedelfazouan/belka-1dcnn-starter-with-all-data/notebook)
-This "belka-1dcnn-starter-with-all-data" employed 1D-CNN model for prediction. There are 142 encoded features used as input and the model finally denses to 3 as prediction of bind. Due to the huge size of dataset, I built the train set into 15 fold and selected 3 of them for model-training and 10 epochs for each fold, which means only 1/5 data was used for training. The final score of average prediction of 3 folds on LeaderBoard is 0.400.
+This "belka-1dcnn-starter-with-all-data" employed 1D-CNN model for prediction. There are 142 encoded features used as input and the model finally denses to 3 as prediction of bind. Due to the huge size of dataset, I built the train set into 15 fold and selected 4 of them for model-training and 15 epochs for each fold, which means only 4/15 data was used for training. The final score of average prediction of 3 folds on LeaderBoard is 0.400.
+
+## Future Plan
+I plan to build models for all of these 15 fold and check if the LB score would be improved.
 
 ## Directory Structure
 - Root/
