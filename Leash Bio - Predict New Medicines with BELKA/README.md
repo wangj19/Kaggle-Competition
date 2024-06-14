@@ -108,3 +108,6 @@ This "belka-1dcnn-starter-with-all-data" employed 1D-CNN model for prediction. T
 
 # Ensembling
 I combine all these models with particular weights(1D-CNN - 0.72, XGB - 0.18, AutoML - 0.10) to build my final predictions. These weights will be further experimented for better score and the current LB score is 0.437.
+
+# Visualization
+I include a [Chemspace-visualization](https://www.kaggle.com/code/hideakiogasawara/chemspace-visualization) notebook in this repository, which illustrate that in the chemical space, molecules binding to each protein exhibited distinct patterns, which is promising. However, test molecules with non-triazine cores appeared isolated from other molecules, particularly in t-SNE. This observation may explain why they pose significant challenges.
