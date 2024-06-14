@@ -61,8 +61,8 @@ This "belka-1dcnn-starter-with-all-data" employed 1D-CNN model for prediction. T
   - belka-1dcnn-starter-with-all-data.ipynb
 
 
-  # [Model 2 - Xgb model](https://www.kaggle.com/code/ricopue/leashbio-xgb-ecfp-10m-sample-rows)
-  This notebook employs encoded [ECFP](https://www.kaggle.com/code/ricopue/leashbio-create-10m-sample-data-and-ecfp) features (approximately 2000 features), and applys ***VarianceThreshold*** from sklearn package to filter them into 1300 features. The simple XGB model is applied without tunning and GPU usage. All of 9.5M data are used and 3000 iterations are planned for training. The original code reaches LB score of 0.369 and this original submission are used for my ensembling.
+# [Model 2 - Xgb model](https://www.kaggle.com/code/ricopue/leashbio-xgb-ecfp-10m-sample-rows)
+This notebook employs encoded [ECFP](https://www.kaggle.com/code/ricopue/leashbio-create-10m-sample-data-and-ecfp) features (approximately 2000 features), and applys ***VarianceThreshold*** from sklearn package to filter them into 1300 features. The simple XGB model is applied without tunning and GPU usage. All of 9.5M data are used and 3000 iterations are planned for training. The original code reaches LB score of 0.369 and this original submission are used for my ensembling.
 
 ## Directory Structure
 - Root/
@@ -81,10 +81,10 @@ This "belka-1dcnn-starter-with-all-data" employed 1D-CNN model for prediction. T
         - submission.csv
   - leashbio-xgb-ecfp-10m-sample-rows.ipynb
 
-  # [Model 3 - AutoML](https://www.kaggle.com/code/mehrankazeminia/5-belka-submission-autogluon-frag1-2-3)
-  The author of [these notebooks](https://www.kaggle.com/datasets/mehrankazeminia/belka-frag-1/code) attempted many models including XGB, LGBM and KNN. For this particular notebook, autogluon machine learning model is employed. And due to the large size of dataset, train set are split into three folds and predictions of three autoML models are combined. This notebook also did ensembling process to merge results of XGB and LGBM models, which I didn't include but considered for future improvement. The "sub_auto.csv" file are used for my ensembling process which only has the AutoML prediction results.
+# [Model 3 - AutoML](https://www.kaggle.com/code/mehrankazeminia/5-belka-submission-autogluon-frag1-2-3)
+The author of [these notebooks](https://www.kaggle.com/datasets/mehrankazeminia/belka-frag-1/code) attempted many models including XGB, LGBM and KNN. For this particular notebook, autogluon machine learning model is employed. And due to the large size of dataset, train set are split into three folds and predictions of three autoML models are combined. This notebook also did ensembling process to merge results of XGB and LGBM models, which I didn't include but considered for future improvement. The "sub_auto.csv" file are used for my ensembling process which only has the AutoML prediction results.
 
- ## Directory Structure
+## Directory Structure
 - Root/
   - Kaggle/
     - Input/
@@ -106,8 +106,34 @@ This "belka-1dcnn-starter-with-all-data" employed 1D-CNN model for prediction. T
         - submission.csv
   - 5-belka-submission-autogluon-frag1-2-3.ipynb
 
+# [Model 4 - KNN](https://www.kaggle.com/code/mehrankazeminia/p-6-6-belka-competition-submission-knn)
+  This KNN(K-Nearest-Neighbors) model and predictions are made by the same author of model 3. There are also three [KNN models created](https://www.kaggle.com/code/mehrankazeminia/p-2-6-belka-create-models-knn) based on their different protein types of molecules. Then the results of predictions are combined as the final result of knn models. The original ensembled results (merging with AutoML) is not included because the AutoML result is also used for my for my ensembling process.
+## Directory Structure
+- Root/
+  - Kaggle/
+    - Input/
+        - leash-predict-chemical-bindings/
+          - test.csv
+          - test.parquet
+          - train.csv
+          - train.parque
+          - sample_submission.csv
+        - **Private Dataset**/
+          - auto_1.csv
+          - auto_2.csv
+          - auto_3.csv
+        - BELKA - Competion Submission [KNN]
+          - knn_1.csv
+          - knn_2.csv
+          - knn_3.csv
+    - Working/
+        - submission.csv
+  - 5-belka-submission-autogluon-frag1-2-3.ipynb
+
+
+
 # Ensembling
-I combine all these models with particular weights(1D-CNN - 0.72, XGB - 0.18, AutoML - 0.10) to build my final predictions. These weights will be further experimented for better score and the current LB score is 0.437.
+I combine all these models with particular weights to build my final predictions. These weights will be further experimented for better score and the current best LB score is 0.437.
 
 # Visualization
 I include a [Chemspace-visualization](https://www.kaggle.com/code/hideakiogasawara/chemspace-visualization) notebook in this repository, which illustrate that in the chemical space, molecules binding to each protein exhibited distinct patterns, which is promising. However, test molecules with non-triazine cores appeared isolated from other molecules, particularly in t-SNE. This observation may explain why they pose significant challenges.
