@@ -41,7 +41,7 @@ We screened three protein targets for this competition: ***EPHX2 (sEH)***, ***BR
 
 
 # [Model 1 - 1D CNN model](https://www.kaggle.com/code/ahmedelfazouan/belka-1dcnn-starter-with-all-data/notebook)
-This "belka-1dcnn-starter-with-all-data" employed 1D-CNN model for prediction. There are 142 encoded features used as input and the model finally denses to 3 as prediction of bind. Due to the huge size of dataset, I built the train set into 15 fold and selected 4 of them for model-training and 15 epochs for each fold, which means only 4/15 data was used for training. The final score of average prediction of 3 folds on LeaderBoard is 0.400.
+This "belka-1dcnn-starter-with-all-data" employed 1D-CNN model for prediction. There are 142 encoded features used as input and the model finally denses to 3 as prediction of bind. Due to the huge size of dataset, I built the train set into 15 fold and selected 4 of them for model-training and 15 epochs for each fold, which means only 4/15 data was used for training. The final score of average prediction of 4 folds on LeaderBoard is 0.412.
 
 ## Future Plan
 I plan to build models for all of these 15 fold and check if the LB score would be improved.
@@ -110,7 +110,7 @@ The author of [these notebooks](https://www.kaggle.com/datasets/mehrankazeminia/
   - 5-belka-submission-autogluon-frag1-2-3.ipynb
 
 # [Model 4 - KNN](https://www.kaggle.com/code/mehrankazeminia/p-6-6-belka-competition-submission-knn)
-  This KNN(K-Nearest-Neighbors) model and predictions are made by the same author of model 3. There are also three [KNN models created](https://www.kaggle.com/code/mehrankazeminia/p-2-6-belka-create-models-knn) based on their different protein types of molecules. Then the results of predictions are combined as the final result of knn models. The original ensembled results (merging with AutoML) is not included because the AutoML result is also used for my for my ensembling process.
+This KNN(K-Nearest-Neighbors) model and predictions are made by the same author of model 3. There are also three [KNN models created](https://www.kaggle.com/code/mehrankazeminia/p-2-6-belka-create-models-knn) based on their different protein types of molecules. Then the results of predictions are combined as the final result of knn models. The original ensembled results (merging with AutoML) is not included because the AutoML result is also used for my for my ensembling process.
 ## Directory Structure
 - Root/
   - Kaggle/
