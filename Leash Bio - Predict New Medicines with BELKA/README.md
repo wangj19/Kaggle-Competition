@@ -40,11 +40,9 @@ We screened three protein targets for this competition: ***EPHX2 (sEH)***, ***BR
 
 
 
-# [Model 1 - 1D CNN model](https://www.kaggle.com/code/ahmedelfazouan/belka-1dcnn-starter-with-all-data/notebook)
-This "belka-1dcnn-starter-with-all-data" employed 1D-CNN model for prediction. There are 142 encoded features used as input and the model finally denses to 3 as prediction of bind. Due to the huge size of dataset, I built the train set into 15 fold and selected 4 of them for model-training and 15 epochs for each fold, which means only 4/15 data was used for training. The final score of average prediction of 4 folds on LeaderBoard is 0.412.
+# [Model 1 - 1D CNN model](https://www.kaggle.com/code/hugowjd/belka-1dcnn-with-all-data-15-folds-15-epoch)
+This [belka-1dcnn-starter-with-all-data](https://www.kaggle.com/code/ahmedelfazouan/belka-1dcnn-starter-with-all-data/notebook) employed 1D-CNN model for prediction. There are 142 encoded features used as input and the model finally denses to 3 as prediction of bind. Due to the huge size of dataset, I built the train set into 15 fold and trained 15 models. The prediction results of 15 models are combined together and averaged as the final result. The LB score is 0.412
 
-## Future Plan
-I plan to build models for all of these 15 fold and check if the LB score would be improved.
 
 ## Directory Structure
 - Root/
@@ -56,11 +54,12 @@ I plan to build models for all of these 15 fold and check if the LB score would 
           - train.csv
           - train.parque
           - sample_submission.csv 
+        - 1DCNN-models for BELKA competition
+         - model-1.h5
+         - ...
+         - model-15.h5
     - Working/
         - submission.csv
-        - model-0.h5
-        - model-1.h5
-        - model-2.h5
   - belka-1dcnn-starter-with-all-data.ipynb
 
 
