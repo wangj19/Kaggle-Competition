@@ -105,3 +105,8 @@ I desided to change the model to see if there is any improvement. The reason why
 ## Submission
 
 The [original notebook](https://www.kaggle.com/code/itsuki9180/rsna2024-lsdc-submission-baseline) uses EfficientNet model and [my submission file](https://www.kaggle.com/code/hugowjd/rsna2024-lsdc-densenet-submission) changed it to DenseNet, using my own weights.
+
+
+# Current Update
+* 6/20/2024 - Combine 5 folds of EfficientNet and 5 folds of DenseNet -> LB = 0.64
+* 6/21/2024 - Trained 5 folds of Xception41
