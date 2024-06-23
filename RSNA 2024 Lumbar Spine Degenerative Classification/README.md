@@ -110,3 +110,4 @@ The [original notebook](https://www.kaggle.com/code/itsuki9180/rsna2024-lsdc-sub
 # Current Update
 * 6/20/2024 - Combine 5 folds of EfficientNet and 5 folds of DenseNet -> LB score: 0.64
 * 6/21/2024 - Trained 5 folds of Xception41, 10 epochs each -> LB score: 0.66
+* 6/22/2024 - 10 folds of DenseNet161 -> LB score: 0.59
