@@ -3,4 +3,4 @@ This is my personal Machine Learning practice collections for Kaggle competition
 
 
 ## Current Plan
-* Working on and adding MLP model to preprocessed data[Learning Agency](https://www.kaggle.com/competitions/learning-agency-lab-automated-essay-scoring-2)
+* Final Finetuning and adjusting parameters for [Learning Agency](https://www.kaggle.com/competitions/learning-agency-lab-automated-essay-scoring-2)
