@@ -4,3 +4,5 @@ This is my personal Machine Learning practice collections for Kaggle competition
 
 ## Current Plan
 * Final Finetuning and adjusting parameters for [Learning Agency](https://www.kaggle.com/competitions/learning-agency-lab-automated-essay-scoring-2)
+* Training new models with more epoch and folds for [Leash Bio](https://www.kaggle.com/competitions/leash-BELKA/overview)
+* Next week plan(06/28/20): training DenseNet264 model
