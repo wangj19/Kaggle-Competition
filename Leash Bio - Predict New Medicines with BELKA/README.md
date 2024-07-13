@@ -135,7 +135,14 @@ This KNN(K-Nearest-Neighbors) model and predictions are made by the same author 
 
 
 # Ensembling
-I combine all these models with particular weights to build my final predictions. These weights will be further experimented for better score and the current best LB score is 0.454.
+I combine all these models with particular weights to build my final predictions. These weights will be further experimented for better score and adjusted based on the performance
+
 
 # Visualization
 I include a [Chemspace-visualization](https://www.kaggle.com/code/hideakiogasawara/chemspace-visualization) notebook in this repository, which illustrate that in the chemical space, molecules binding to each protein exhibited distinct patterns, which is promising. However, test molecules with non-triazine cores appeared isolated from other molecules, particularly in t-SNE. This observation may explain why they pose significant challenges.
+
+
+# Conclusion
+My highest public score is 0.454, ranked 190/1946. However, the final private score is significantly different from public board, where I only got score of 0.244, ranked 456/1946. The ***BELKA 1DCNN with all data | 15 Folds | 20 Epoch*** actually receive a private score of 0.261 (0.419 on public leaderboard), which could earn a silver medal, but unfortunately, I didn't choose it as my final submission. From this experience, I learned that pursuing high score on public leaderboard doesn't necessarily help the final private score and ensembling may not perform well. Score-tracing is not a good strategy of machine learning, and the application performance is the real key. 
+
+Case ends - 07/13/2024
