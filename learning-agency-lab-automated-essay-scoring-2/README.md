@@ -25,9 +25,14 @@ Competition Link: https://www.kaggle.com/competitions/learning-agency-lab-automa
         - submission.csv
   - playground.ipynb
 
-# Modek
+# Model
 I draft my code from two open-source notebook. One notebook implements feature engineering based on the texts to expand features, including paragraph, sentence, and word-based features. It also contains character and word TFIDF features. All of these feature augmentation finally provides over 3800 features for the ***LGBM regressor*** to generate predictions with 5-fold train and validation datasets. The original notebook link: https://www.kaggle.com/code/deepaksingh47/feature-engineeing-lgbm
 
 The second notebook employed 6 LLM models to process text embedding and concatenate these 6 sets of embeddings together as features. However, the original auther applies a model called ***RAPIDS SVR*** developed by Nvidia while the author is affiliated with Nvidia. The starter code link：https://www.kaggle.com/code/cdeotte/rapids-svr-starter-cv-0-830-lb-0-804. However, for easier application and higher performance, I chose to change the final model to MLP model. The MLP model link: https://www.kaggle.com/code/innotechryan/rapids-svr-starter-cv-0-830-lb-0-800/notebook. The dataset is folded 10 time to generate 10 models and their corresponding predictions.
 
 There are 15 predictions generated from two types of models while LGBM models generate floats and MLP model dense to integer, I finally compute the avarage and round it as my final prediction.
+
+# Conclusion
+As my first kaggle competition, my partner Max and I actually didn't generate so many innovative ideas. The main time we used is to get familiar with Kaggle's machanism and how could we "take advantage" of the free computation force. Our final submission would originate from high-scored public code, which does not worth a talk. However, this notebook ensembled two approaches of prediction still scored 0.817 on the final leaderboard, which is not a bad result. My participation of this competition is really a cool experience of learning for me.
+
+Case end - 07/02/2024
