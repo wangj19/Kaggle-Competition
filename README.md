@@ -2,8 +2,9 @@
 This is my personal Machine Learning practice collections for Kaggle competitions. This is my [Kaggle profile](https://www.kaggle.com/hugowjd), and please upvote if you find something helpful! Thank you all!
 
 
-## Medal
-* Notebook: 3🥇0🥈1🥉
+## Notebook 
+    * Medals: 3🥇0🥈3🥉
+    * Ranked 727 of 60,807
 
 ## Current Plan
 * Next week plan(07/20/24): 
