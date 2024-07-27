@@ -47,7 +47,7 @@ The following are examples from the training set. 'Strongly-labelled tiles' are 
 ## Solution
 <div style="text-align: center;">
     <img src="ISIC-model_drawio.png" alt="Diagram" style="width:50%;">
-    <p><em>Solustion Diagram</em></p>
+    <p><em>Solution Diagram</em></p>
 </div>
 
 Since the competition has both images and regular meta data, I split the solution process into two parts: training CNN models to process images, adding preds of image from CNN models as extra features and training regular ML model with meta data.
