@@ -29,3 +29,31 @@ The following are examples from the training set. 'Strongly-labelled tiles' are 
 **test-image.hdf5** - test image data contained in a single hdf5 file, with the isic_id as key. This contains 3 test examples to ensure your inference pipeline works correctly. When the submitted notebook is rerun, this file is swapped with the full hidden test set, which contains approximately 500k images.
 **test-metadata.csv** - metadata for the test subset
 **sample_submission.csv** - a sample submission file in the correct format
+
+# Model
+
+## Directory Structure
+- Root/
+  - Kaggle/
+    - Input/
+        - model inference script (make preds for test data)
+        - preds of training data for CNN models
+        - CNN model weights
+    - Working/
+        - submission files of CNN models(csv)
+        - submission.csv
+  - isic-tabular-ensemble-lgbm-catboost.ipynb
+
+## Solution
+<div style="text-align: center;">
+    <img src="ISIC-model_drawio.png" alt="Diagram" style="width:50%;">
+    <p><em>Solustion Diagram</em></p>
+</div>
+
+Since the competition has both images and regular meta data, I split the solution process into two parts: training CNN models to process images, adding preds of image from CNN models as extra features and training regular ML model with meta data.
+
+The original notebook author prepared EfficientNet_b0 model and eva02_small models and trained weights. I've tested other models in EfficientNet series but they don't make distinguishable performance due to limit size of positive cases. I've made effort on expand training size by adding extra positive cases from past competitions, but some models even perform worse. Therefore, I trained new DenseNet161 model with all positive cases from this competition with same amount of negative cases. Then test data inference script is written and preds of training data are produced.
+
+The final preds are made by 5-folds of LGBM model and 5-folds of CatBoost model ensembled with given weights. Due to the lesson I learned from previous competitions, I won't stick too much on tuning ensembling weights this time.
+
+The training and inference time for ML model is about 1000 seconds. The approximate inference time for test data is about 4 hours in total and the limitation of this competition is <= 9 hours, which means that there is spare inference time that I could add one or two extra CNN preds as new features.
