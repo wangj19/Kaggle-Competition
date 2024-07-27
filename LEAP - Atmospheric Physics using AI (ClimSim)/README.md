@@ -36,7 +36,10 @@ EDIT: The test.csv and sample_submission.csv have been updated. Please use these
 
 # Model
 A CNN model was constructed for training. The model summary is shown here. 
-![alt text](1721109059724.png)
+<div style="text-align: center;">
+    <img src="1721109059724.png" alt="Diagram" style="width:50%;">
+    <p><em>Model Summary</em></p>
+</div>
 
 # Conclusion
 My own model gained a public score of 0.67480, and the private score is 0.67398, ranked 309/693 on final leaderboard. This competition provides tremendous data with high precision, which lead to high computation requirement. Even my simple model would run more than 10 hour on GPU, and the modeling is no more continuous due to heavy computation tasks and high cost of testing. However, it is still an interesting of experience of learning deep recurrent neural network, especially Seq2Seq model. The model must belong to the masterpiece of LSTM and GRU, and I'm pretty happy of getting involved. 
