@@ -3,8 +3,11 @@ This is my personal Machine Learning practice collections for Kaggle competition
 
 
 ## Notebook 
-    * Medals: 3🥇0🥈3🥉
-    * Ranked 727 of 60,807
+    * Medals: 3🥇1🥈3🥉
+    * Ranked 585 of 60,979
+
+## Datasets
+    * Medals: 3🥉
 
 ## Current Plan
 * Next week plan(07/30/24): 
