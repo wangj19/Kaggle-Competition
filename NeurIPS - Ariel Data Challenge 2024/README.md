@@ -21,4 +21,13 @@ This competition uses a hidden test set. When your submitted notebook is scored,
 A dozen of the exoplanet simulations in the test set were based directly real exoplanets. All of those cases are ignored for scoring purposes.
 
 
+# Solution
+## Data Preprocessing
+The dataset is super huge: every exoplanet has images captured by two instruments. AIRS-CH0 has 11250 rows of images captured at constant time steps noted in axis_info.parquet file for details of the time steps. Each 32 x 356 image has been flattened into 11392 columns. And FGS1 instrument has 135,000 rows of images at 0.1 second time steps for each planet. Each 32x32 image has been flattened into 1024 columns.
+
+Since this competition requires super high professional knowledge, I've look through many EDA notebooks and hardly get helpful approach to summarize these huge datasets. Therefore I employ the preprocessing method that sums up flux of every image into a single number and records the flux change between images. Every exoplanet has an obscured period and the flux differences between obscured period and unobscured period of each exoplanet are used as features for wavelength prediction.
+
+## Model
+I currently used Ridge model since I only have 2 usable features so far.
+
 
