@@ -29,3 +29,26 @@ Please note that this is a Code Competition. When your submission is scored, thi
 id
 prompt
 response_[a/b]
+
+
+# Solution
+## Model
+We have attempted three well-known open-sourced LLM models to solve sequence classification tasks for the competition: llama3 8b, gemma2 9b, and qwen2 1.5b(only 1.5b could be trained on A100 and finetuning of qwen2 7b would be out of memory).
+
+The only computation power we can access is A100 on Colab and there is only ~50 hours of computation time. Therefore, we attempted to finetune both llama3 and gemma2 with full data and in order to fit gemma2 into 40G of memory, the quantized 8bit version of gemma2 was selected. And gemma2 does have better performance than llama3 with more parameters in this sequence classification task, and of course, lead to longer inference time.
+
+## Result
+Due to the leakage problem, the host re-test the participants' attempts and only two submissions have real private score. Therefore, I would only list public LB score for each model:
+
+|Model      |LB Score|
+|-----------|--------|
+|Gemma2 9b  |0.92297 |
+|Llama3 9b  |0.97917 |
+|Qwen2 1.5b |1.05282 |
+
+The final private score is 1.02053, ranked 444/1849.
+
+# Conclusion
+In my perspective, this is a really competitive race of computation. Due to limit of computation power, we only made a few attempts of LLM deployment and funetuning, but made interesting result, which could be considered as an great experience for me. As I read so many notebooks and discussions from Kaggle Masters, I do learned a lot from their professions and experience, especially for LLM fields. Although, the last week leakage event spoiled this game, I still think the amount of effort I paid makes me gain enough from this competition. Particularly, the idea of applying 34b quantized vLLM is astonishing for me. Again, the ranking result is not good, but I'm certain that I can do better if I got more computation hour or better device.
+
+Case End - 08/12/2024
